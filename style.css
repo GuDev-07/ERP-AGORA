@@ -87,23 +87,55 @@
   }
   
   .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
   }
   
-  .content-wrapper h1 {
+  .text-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  h1 {
     font-size: 36px;
     color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #7f8c8d;
     margin-bottom: 20px;
   }
   
-  .content-wrapper p {
-    font-size: 18px;
-    color: #7f8c8d;
+  .image-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
   }
   
-  /* Responsividade */
+  .image-container img {
+      width: 100%; /* Garante que a imagem se ajuste ao contêiner */
+      max-width: 900px; /* Define um tamanho máximo para evitar que fique muito grande */
+      height: auto; /* Mantém a proporção original da imagem */
+      display: block; /* Remove espaçamentos extras indesejados */
+      margin: 20px auto; /* Centraliza a imagem e adiciona espaçamento */
+      border-radius: 8px; /* Deixa as bordas arredondadas para um visual moderno */
+    
+  }
+  
   @media (max-width: 768px) {
     .sidebar {
       width: 200px;
@@ -124,15 +156,32 @@
   
   @media (max-width: 576px) {
     .sidebar {
-      width: 0;
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-bottom: 10px;
+    }
+  
+    .sidebar nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+  
+    .sidebar nav ul li {
+      padding: 10px;
+      text-align: center;
+      flex-grow: 1;
+    }
+  
+    .sidebar nav ul li a {
+      font-size: 14px;
     }
   
     .main-content {
       margin-left: 0;
-    }
-  
-    .sidebar nav ul li {
-      text-align: center;
+      padding: 15px;
     }
   
     .content-wrapper h1 {
@@ -143,9 +192,28 @@
       font-size: 14px;
     }
   }
-  
 
 /*PAGINA DE LOGIN*/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.logo{
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img{
+  max-width: 100%;
+  height: auto;
+}
+
 body.login {
     height: 100vh;
     background: linear-gradient(270deg, #442502, #68390375, #683903);
@@ -173,7 +241,7 @@ body.login {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-    width: 100%;
+    width: 45%;
     max-width: 400px;
   }
   
@@ -216,10 +284,60 @@ body.login {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
   }
   
   button[type="submit"]:hover {
     background-color: #554fd8;
+  }
+  
+  @media screen and (max-width: 480px) {
+    
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .background {
+      order: -1; /* Movendo forms para cima */
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      order: 1; /* Movendo logo para baixo */
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    body.login {
+      padding: 10px;
+    }
+  
+    .background {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .login-form h2 {
+      font-size: 26px;
+      font-weight: 600;
+    }
+  
+    .input-group label {
+      font-size: 20px;
+      font-weight: 400;
+    }
+  
+    .input-group input {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    button[type="submit"] {
+      font-size: 19px;
+      padding: 10px;
+    }
   }
 /*FIM PAGINA DE LOGIN*/

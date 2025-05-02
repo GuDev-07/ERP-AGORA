@@ -1,38 +1,33 @@
-const form = document.querySelector('.login-form');
-
-form.addEventListener('submit', function(event){
-    event.preventDefault(); //Mensagem impedindo o envio
-    window.location.href = 'interface-principal.html' //ate a pagina principal do sistema
-});
-
-
-// Simulando um banco de dados não relacional com um array de usuários
+//USUARIOS QUE VÃO ACESSAR
 const usuarios = [
-    { id: 1, nome: "Gustavo", senha: "1234" },
-    { id: 2, nome: "Marcelo", senha: "1357" },
-    { id: 3, nome: "João", senha: "2468" },
+    { user: "Gustavo", senha: "X#v9ZpLq!2Tb@d7" },
+    { user: "Marcelo", senha: "rTg@1Np&xY5zW$8" },
+    { user: "João", senha: "M3q!7cZx@T6vRp#" },
+    { user: "Maria", senha: "#mQ9&vW8" },
   ];
   
-  function verificarLogin(nome, senha) {
-    return usuarios.find(usuario => usuario.email === email && usuario.senha === senha);
+  function verificarLogin(user, senha) {
+    return usuarios.find(usuario => usuario.user === user && usuario.senha === senha);
   }
   
   document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Impede o envio do formulário
 
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
-  
-    const usuario = verificarLogin(email, senha);
-  
-    if (usuario) {
-      alert(`Login bem-sucedido! Bem-vindo, ${usuario.nome}`);
+    const user = document.getElementById("user").value.trim();
+    const senha = document.getElementById("senha").value.trim();
 
-      
-      window.location.href = "pagina_principal.html"; 
-    } else {
-     
-      alert("Usuário ou senha incorretos.");
+    if (user === "" || senha === "") {
+        window.alert("Preencha os campos antes por favor!");
+        return;
     }
-  });
+        const usuario = verificarLogin(user, senha);
+        
+    if (usuario) {
+        alert(`Login bem-sucedido! Bem-vindo, ${usuario.user}`);
+        window.location.href = "interface-principal.html"; // Redireciona apenas se a senha estiver correta
+    } else {
+        window.alert("Usuário ou senha incorretos.");
+    }
+});
+
   
