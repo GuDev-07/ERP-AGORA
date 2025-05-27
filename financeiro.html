@@ -17,5 +17,186 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="sidebar">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><i class="bi bi-cash-stack"></i> <a href="financeiro.html">Financeiro</a></li>
+            <li><i class="bi bi-gear"></i> <a href="producao.html">Produção</a></li>
+            <li><i class="bi bi-cart"></i> <a href="vendas.html">Vendas & Faturamento</a></li>
+            <li class="active"><i class="bi bi-house"></i> <a href="interface-principal.html">Home</a></li>
+            <li><i class="bi bi-box-seam"></i> <a href="estoque.html">Estoque</a></li>
+            <li><i class="bi bi-shield-lock"></i> <a href="seguranca.html">Segurança</a></li>
+            <li><i class="bi bi-tools"></i> <a href="parametros.html">Parametros do sistema</a></li>
+        </ul>
+    </nav>
+  </div>
+
+  <main class="financeiro-container">
+  <h1>Financeiro</h1>
+
+  <!--FINANCEIRO RECEITAS E DESPESAS-->
+  <section class="financeiro-cards">
+    <div class="financeiro-card">
+      <h2>Saldo Disponível</h2>
+      <p class="positivo">R$ 167.430,90</p>
+    </div>
+    <div class="financeiro-card">
+      <h2>Receitas (Mês)</h2>
+      <p class="azul">R$ 13.200,00</p>
+    </div>
+    <div class="financeiro-card">
+      <h2>Despesas (Mês)</h2>
+      <p class="negativo">R$ 8.750,00</p>
+    </div>
+  </section>
+  <!--FIM DO FINANCEIRO RECEITAS E DESPESAS-->
+
+  <!--CONTAS A PAGAR E RECEBER-->
+  <section class="financeiro-section">
+    <h2>Contas a Pagar e Receber</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/05/2025</td>
+          <td>Pagamento fornecedor ArceloMittal</td>
+          <td>R$ 1.200,00</td>
+          <td class="financeiro-status-verde">Pago</td>
+        </tr>
+        <tr>
+          <td>15/05/2025</td>
+          <td>Recebimento Alumitrol</td>
+          <td>R$ 23.500,00</td>
+          <td class="financeiro-status-verde">Recebido✔</td>
+        </tr>
+        <tr>
+          <td>17/05/2025</td>
+          <td>Recebimento JASON</td>
+          <td>R$ 3.500,00</td>
+          <td class="financeiro-status-verde">Recebido✔</td>
+        </tr>
+        <tr>
+          <td>29/05/2025</td>
+          <td>Pagamento fornecedor SUVINIL</td>
+          <td>R$ 21.500,00</td>
+          <td class="financeiro-status-vermelho">Atrasado</td>
+        </tr>
+        <tr>
+          <td>09/04/2025</td>
+          <td>Recebimento ZF</td>
+          <td>R$ 34.768,00</td>
+          <td class="financeiro-status-laranja">Aguardando</td>
+        </tr>
+        <tr>
+          <td>06/05/2025</td>
+          <td>Pagamento FLEX</td>
+          <td>R$ 23.500,00</td>
+          <td class="financeiro-status-verde">Pago</td>
+        </tr>
+        <tr>
+          <td>04/05/2025</td>
+          <td>Pagamento BOSCH</td>
+          <td>R$ 6.500,00</td>
+          <td class="financeiro-status-verde">Pago</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <!--CONTAS A PAGAR E RECEBER-->
+
+   <!--PARTE FISCAL-->
+  <section class="financeiro-section">
+    <h2>Lançamentos Fiscais</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Valor</th>
+          <th>Vencimento</th>
+          <th>Situação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NF-e 001256</td>
+          <td>R$ 2.700,00</td>
+          <td>20/05/2025</td>
+          <td class="financeiro-status-laranja">Aguardando</td>
+        </tr>
+        <tr>
+          <td>DARF IRPJ</td>
+          <td>R$ 1.050,00</td>
+          <td>25/05/2025</td>
+          <td class="financeiro-status-verde">Pago</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <!--PARTE FISCAL-->
+
+  <!--TRANSAÇÕES RECENTES-->
+  <section class="financeiro-section">
+  <h2>Transações Recentes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Tipo</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>13/05/2025</td>
+        <td>Receita</td>
+        <td>Venda produto X</td>
+        <td style="color: green;">R$ 2.100,00</td>
+      </tr>
+      <tr>
+        <td>14/05/2025</td>
+        <td>Despesa</td>
+        <td>Conta de energia</td>
+        <td style="color: red;">R$ 480,00</td>
+      </tr>
+      <tr>
+        <td>14/05/2025</td>
+        <td>Receita</td>
+        <td>Serviço prestado Y</td>
+        <td style="color: green;">R$ 1.300,00</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<!--TRANSAÇÕES RECENTES-->
+
+<!--TRANSAÇÕES FUTURAS-->
+<section>
+  <h2>Cadastrar Nova Transação</h2>
+  <form style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <input type="text" placeholder="Descrição" style="flex: 2; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <input type="number" placeholder="Valor" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <select style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <option>Tipo</option>
+      <option value="receita">Receita</option>
+      <option value="despesa">Despesa</option>
+    </select>
+    <input type="date" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <button type="submit" style="padding: 10px 20px; background-color: #683903; color: white; border: none; border-radius: 5px;">Salvar</button>
+  </form>
+</section>
+<!--TRANSAÇÕES RECENTES-->
+
+</main>
 </body>
 </html>
