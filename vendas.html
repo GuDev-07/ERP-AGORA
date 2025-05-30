@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">
+  <div class="sidebar">
     <div class="logo-container">
       <img src="images/logo.png" alt="Logo">
     </div>
@@ -25,13 +25,89 @@
         <ul>
             <li><i class="bi bi-cash-stack"></i> <a href="financeiro.html">Financeiro</a></li>
             <li><i class="bi bi-gear"></i> <a href="producao.html">Produção</a></li>
-            <li><i class="bi bi-cart"></i> <a href="vendas.html">Vendas & Faturamento</a></li>
-            <li class="active"><i class="bi bi-house"></i> <a href="interface-principal.html">Home</a></li>
+            <li class="active"><i class="bi bi-cart"></i> <a href="vendas.html">Vendas & Faturamento</a></li>
+            <li><i class="bi bi-house"></i> <a href="interface-principal.html">Home</a></li>
             <li><i class="bi bi-box-seam"></i> <a href="estoque.html">Estoque</a></li>
             <li><i class="bi bi-shield-lock"></i> <a href="seguranca.html">Segurança</a></li>
-            <li><i class="bi bi-tools"></i> <a href="parametros.html">Parametros do sistema</a></li>
+            <li><i class="bi bi-tools"></i> <a href="parametros.html">Parâmetros do sistema</a></li>
         </ul>
     </nav>
   </div>
+
+  <main class="vendas-container">
+  <h1>Vendas & Faturamento</h1>
+
+  <!--METAS DE VENDAS-->
+  <section class="vendas-cards">
+    <div class="vendas-card">
+      <h2>Meta do Mês</h2>
+      <p class="positivo">R$ 250.000,00</p>
+    </div>
+    <div class="vendas-card">
+      <h2>Vendas Realizadas</h2>
+      <p class="azul">R$ 180.300,00</p>
+    </div>
+    <div class="vendas-card">
+      <h2>Pedidos Pendentes</h2>
+      <p class="negativo">R$ 15.750,00</p>
+    </div>
+  </section>
+  <!--FIM DAS METAS DE VENDAS-->
+
+  <!--PEDIDOS EM ANDAMENTO-->
+  <section class="vendas-section">
+    <h2>Pedidos Recentes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Cliente</th>
+          <th>Valor</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/05/2025</td>
+          <td>Empresa XPTO</td>
+          <td>R$ 7.200,00</td>
+          <td class="vendas-status-verde">Entregue✔</td>
+        </tr>
+        <tr>
+          <td>15/05/2025</td>
+          <td>Alumitrol</td>
+          <td>R$ 23.500,00</td>
+          <td class="vendas-status-verde">Entregue✔</td>
+        </tr>
+        <tr>
+          <td>17/05/2025</td>
+          <td>Cliente Y</td>
+          <td>R$ 3.500,00</td>
+          <td class="vendas-status-laranja">Em transporte</td>
+        </tr>
+        <tr>
+          <td>29/05/2025</td>
+          <td>Cliente Z</td>
+          <td>R$ 21.500,00</td>
+          <td class="vendas-status-vermelho">Atrasado</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <!--FIM DOS PEDIDOS EM ANDAMENTO-->
+
+  <!--CADASTRAR NOVA VENDA-->
+  <section>
+    <h2>Registrar Nova Venda</h2>
+    <form style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <input type="text" placeholder="Nome do Cliente" style="flex: 2; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="number" placeholder="Valor da Venda" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="date" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <button type="submit" style="padding: 10px 20px; background-color: #0288d1; color: white; border: none; border-radius: 5px;">Salvar</button>
+    </form>
+  </section>
+  <!--FIM DO CADASTRO DE VENDA-->
+
+</main>
 </body>
 </html>
