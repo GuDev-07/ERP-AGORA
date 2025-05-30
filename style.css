@@ -518,3 +518,90 @@ border-radius: 8px;
 box-shadow: 0 0 5px #aaa;
 }
 /*FIM MODULO PRODUÇÃO*/
+
+/* MÓDULO VENDAS */
+.vendas-container {
+  margin-left: 250px;
+  padding: 30px;
+  width: calc(100% - 250px);
+}
+
+.vendas-container h1 {
+  margin-bottom: 20px;
+  color: #0288d1; /* Azul mais vibrante para diferenciar de financeiro */
+}
+
+.vendas-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.vendas-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.vendas-card h2 {
+  margin-bottom: 10px;
+}
+
+.vendas-card p {
+  font-size: 1.5em;
+}
+
+.vendas-card .positivo {
+  color: green;
+}
+
+.vendas-card .azul {
+  color: #007bff;
+}
+
+.vendas-card .negativo {
+  color: red;
+}
+
+.vendas-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 30px;
+}
+
+.vendas-section h2 {
+  margin-bottom: 10px;
+}
+
+.vendas-section table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.vendas-section th,
+.vendas-section td {
+  padding: 10px;
+  text-align: left;
+}
+
+.vendas-section thead tr {
+  background: #eee;
+}
+
+.vendas-status-vermelho {
+  color: red;
+}
+
+.vendas-status-verde {
+  color: green;
+}
+
+.vendas-status-laranja {
+  color: orange;
+}
+/* FIM DO MÓDULO VENDAS */
